@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex002</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo</h1>
+    <p>teste</p>
+    <script>
+         //função para a soma de 2 números
+         function sum(){
+            //utilizando a função "Number()" para converter uma String para um número
+            let num1 = Number(window.prompt("Digite um numero"));
+            let num2 = Number(window.prompt("Digite outro numero"));
+            
+            let calc = num1+num2;
+
+            alert(`${num1} + ${num2} = ${calc}`);
+            /*num1.toLocaleString('pt-br', {style:'currency', currency: 'BRL'}) só pra salvar*/
+        }
+        sum()        
+    </script>
+</body>
+</html>
