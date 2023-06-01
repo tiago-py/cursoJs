@@ -135,3 +135,8 @@ console.log("pizza" in map);
 // → true
 console.log(map["touched tree"]);
 // → -0.081
+for (var event in map)
+  console.log("The correlation for '" + event +
+              "' is " + map[event]);
+// → The correlation for 'pizza' is 0.069
+// → The correlation for 'touched tree' is -0.081
