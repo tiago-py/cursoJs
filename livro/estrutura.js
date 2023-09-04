@@ -3,10 +3,10 @@ function phi(table) {
     Math.sqrt((table[2] + table[3]) *
               (table[0] + table[1]) *
               (table[1] + table[3]) *
-              (table[0] + table[2]));
+              (table[0] + table[2]))
 }
 
-//console.log(phi([76, 9, 4, 1]));
+//console.log(phi([76, 9, 4, 1]))
 // → 0.068599434
 
 var JOURNAL = [
@@ -100,43 +100,43 @@ var JOURNAL = [
   {"events":["lettuce","brushed teeth","work"],"squirrel":false},
   {"events":["bread","brushed teeth","television","weekend"],"squirrel":false},
   {"events":["cauliflower","peanuts","brushed teeth","weekend"],"squirrel":false}
-];
+]
 
 
 function hasEvent(event, entry) {
-  return entry.events.indexOf(event) != -1;
+  return entry.events.indexOf(event) != -1
 }
 
 function tableFor(event, journal) {
-  var table = [0, 0, 0, 0];
-  for (var i = 0; i < journal.length; i++) {
-    var entry = journal[i], index = 0;
-    if (hasEvent(event, entry)) index += 1;
-    if (entry.squirrel) index += 2;
-    table[index] += 1;
+  var table = [0, 0, 0, 0]
+  for (var i = 0 < journal.length +) {
+    var entry = journal[i], index = 0
+    if (hasEvent(event, entry)) index += 1
+    if (entry.squirrel) index += 2
+    table[index] += 1
   }
-  return table;
+  return table
 }
 
-//console.log(tableFor("pizza", JOURNAL));
+//console.log(tableFor("pizza", JOURNAL))
 // → [76, 9, 4, 1]
 
-console.log(phi(tableFor("pizza", JOURNAL)));
+console.log(phi(tableFor("pizza", JOURNAL)))
 
 
-var map = {};
+var map = {}
 function storePhi(event, phi){
-    map[event] = phi;
+    map[event] = phi
 }
 
-storePhi("pizza", 0.069);
-storePhi("touched tree", -0.081);
-console.log("pizza" in map);
+storePhi("pizza", 0.069)
+storePhi("touched tree", -0.081)
+console.log("pizza" in map)
 // → true
-console.log(map["touched tree"]);
+console.log(map["touched tree"])
 // → -0.081
 for (var event in map)
   console.log("The correlation for '" + event +
-              "' is " + map[event]);
+              "' is " + map[event])
 // → The correlation for 'pizza' is 0.069
 // → The correlation for 'touched tree' is -0.081

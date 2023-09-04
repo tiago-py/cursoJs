@@ -7,13 +7,13 @@ var day1 = {
 squirrel: false,
 events: ["work", "touched tree", "pizza", "running",
             "television"]
-};
-console.log(day1.squirrel);
+}
+console.log(day1.squirrel)
 // → false
-console.log(day1.wolf);
+console.log(day1.wolf)
 // → undefined
-day1.wolf = false;
-console.log(day1.wolf);
+day1.wolf = false
+console.log(day1.wolf)
 // → false
 
 /*
@@ -29,7 +29,7 @@ Propriedades cujos nomes não são variáveis ou números válidos precisam esta
 var descriptions = {
 work: "Went to work",
 "touched tree": "Touched a tree"
-};
+}
 
 
 var journal = [
@@ -58,8 +58,8 @@ var journal = [
         "beer"
     ],
     squirrel: true},
-];
-console.log(journal[0]);
+]
+console.log(journal[0])
 /*
 false    
 {
@@ -68,19 +68,19 @@ squirrel: false
 }
 */
 
-var object1 = {value: 10};
-var object2 = object1;
-var object3 = {value: 10};
+var object1 = {value: 10}
+var object2 = object1
+var object3 = {value: 10}
 
-console.log(object1 == object2);
+console.log(object1 == object2)
 // → true
-console.log(object1 == object3);
+console.log(object1 == object3)
 // → false
 
-object1.value = 15;
-console.log(object2.value);
+object1.value = 15
+console.log(object2.value)
 // → 15
-console.log(object3.value);
+console.log(object3.value)
 // → 10
 /*As variáveis object1 e object2 estão associadas ao mesmo objeto e, por isso, alterar 
 object1 também altera o valor de object2.

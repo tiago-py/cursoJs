@@ -9,21 +9,21 @@ o array é escrito como uma lista de valores separados por vírgulas e entre col
 */
 
 
-var listOfNumbers = [2, 3, 5, 7, 11];
-console.log(listOfNumbers[1]);
+var listOfNumbers = [2, 3, 5, 7, 11]
+console.log(listOfNumbers[1])
 // → 3
-console.log(listOfNumbers[1 - 1]);
+console.log(listOfNumbers[1 - 1])
 // → 2 
 
 //Alguns métodos de arrays
-var mack = [];
-mack.push("Mack");
-mack.push("the", "Knife");
-console.log(mack);
+var mack = []
+mack.push("Mack")
+mack.push("the", "Knife")
+console.log(mack)
 // → ["Mack", "the", "Knife"]
-console.log(mack.join(" "));
+console.log(mack.join(" "))
 // → Mack the Knife
-console.log(mack.pop());
+console.log(mack.pop())
 // → Knife
-console.log(mack);
+console.log(mack)
 // → ["Mack", "the"]
