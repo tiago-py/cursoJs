@@ -11,10 +11,10 @@ export default function CoffeeCard({item}) {
   return (
 
       <View 
+      className="h-full flex flex-column"
         style={{
           borderRadius: 40, 
-          backgroundColor: themeColors.bgDark, 
-          height: ios? height*0.4 : height*0.50, 
+          backgroundColor: themeColors.bgDark,  
           width: width*0.65,
         }} 
         >
@@ -42,11 +42,11 @@ export default function CoffeeCard({item}) {
                 <StarIcon size="15" color="white" />
                 <Text className="text-base font-semibold text-white">{item.stars}</Text>
               </View>
-              <View className="flex-row space-x-1 z-10 mb-6">
+              <View className="flex-row space-x-1 z-10 mb-1">
                 <Text className="text-base text-white font-semibold opacity-60">
                   Volume 
                 </Text>
-                <Text className="text-base text-white font-semibold"> {item.volume}</Text>
+                <Text className="text-base text-white font-semibold"> {item.volume[0]}</Text>
               </View>
             </View>
             
@@ -57,17 +57,17 @@ export default function CoffeeCard({item}) {
               shadowRadius: 25,
               shadowOffset: {width: 0, height: 40},
               shadowOpacity: 0.8,
-            }} className="flex-row justify-between items-center mb-5">
+            }} className="flex-row justify-between items-center mb-7">
               <Text className="text-white font-bold text-lg">$ {item.price}</Text>
               <TouchableOpacity 
               onPress={()=> navigation.navigate('Product', {...item})}
               style={{
                 shadowColor: 'black',
                 shadowRadius: 40,
-                shadowOffset: {width: -20, height: -10},
+                shadowOffset: {width: -50, height: -40},
                 shadowOpacity: 1,
               }} className="p-4 bg-white rounded-full">
-                <PlusIcon size="25" strokeWidth={2} color={themeColors.bgDark} />
+                <PlusIcon size="20" strokeWidth={2} color={themeColors.bgDark} />
               </TouchableOpacity>
             </View>
             

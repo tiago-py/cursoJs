@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {themeColors} from '../theme';
 import { StatusBar } from 'expo-status-bar';
-import { categories, coffeeItems } from '../constants';
+import { categories, coffeeFav } from '../constants';
 import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
@@ -36,17 +36,6 @@ export default function HomeScreen() {
           </View>
           <BellIcon size="27" color="black" />
         </View>
-        {/* search bar */}
-        <View className="mx-5 shadow" style={{marginTop: height*0.06}}>
-          <View className="flex-row items-center rounded-full p-1 bg-[#e6e6e6]">
-            <TextInput placeholder='Search' className="p-4 flex-1 font-semibold text-gray-700" />
-            <TouchableOpacity 
-              className="rounded-full p-2" 
-              style={{backgroundColor: themeColors.bgLight}}>
-              <MagnifyingGlassIcon size="25" strokeWidth={2} color="white" />
-            </TouchableOpacity>
-          </View>
-        </View>
         {/* categories */}
         <View className="px-5 mt-6">
           <FlatList 
@@ -77,7 +66,7 @@ export default function HomeScreen() {
         <View>
           <Carousel
             containerCustomStyle={{overflow: 'visible'}}
-            data={coffeeItems}
+            data={coffeeFav}
             renderItem={({item})=> <CoffeeCard item={item} />}
             firstItem={1}
             loop={true}
