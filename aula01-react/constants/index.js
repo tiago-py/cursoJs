@@ -96,3 +96,13 @@ export const coffeeFav = [
     desc: 'The taste of coffee can vary depending on factors such as the type of beans, roast level, brewing method, and the addition of any flavors or sweeteners.'
   }
 ]
+export const Favorite = [
+  {
+    id: 1,
+    title: "Cappuccino",
+  },
+  {
+    id: 2,
+    title: "Black Coffee",
+  }
+]

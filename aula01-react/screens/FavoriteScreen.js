@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {themeColors} from '../theme';
 import { StatusBar } from 'expo-status-bar';
-import { categories, coffeeFav } from '../constants';
+import { Favorite, categories, coffeeFav } from '../constants';
 import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
@@ -20,7 +20,7 @@ export default function HomeScreen() {
 
       <Image 
         source={require('../assets/images/beansBackground1.png')} 
-        style={{height: height*0.2}} 
+        style={{height: height}} 
         className="w-full absolute -top-5 opacity-10" />
       <SafeAreaView className={ios? '-mb-8': ''}>
         {/* avatar and bell icon */}
@@ -41,7 +41,7 @@ export default function HomeScreen() {
           <FlatList 
             horizontal
             showsHorizontalScrollIndicator={false}
-            data={categories}
+            data={Favorite}
             keyExtractor={item=> item.id}
             className="overflow-visible mb-3"
             renderItem={({item})=>{
@@ -65,7 +65,7 @@ export default function HomeScreen() {
       <View className={`overflow-visible flex justify-center flex-1 ${ios? 'mt-10':''} mb-3`}>
         <View>
           <Carousel
-            containerCustomStyle={{overflow: 'visible'}}
+            containerCustomStyle={{overflow: 'visible',height:400}}
             data={coffeeFav}
             renderItem={({item})=> <CoffeeCard item={item} />}
             firstItem={1}

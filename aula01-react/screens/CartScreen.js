@@ -47,51 +47,9 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
         </View>
-        {/* categories */}
-        <View className="px-5 mt-6">
-          <FlatList 
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            data={categories}
-            keyExtractor={item=> item.id}
-            className="overflow-visible mb-3"
-            renderItem={({item})=>{
-              isActive = item.id==activeCategory;
-              let activeTextClass = isActive? 'text-white': 'text-gray-700';
-              return (
-                <TouchableOpacity 
-                onPress={()=> setActiveCategory(item.id)}
-                style={{backgroundColor: isActive? themeColors.bgLight: 'rgba(0,0,0,0.07)'}} 
-                className="p-4 px-5 mr-2 rounded-full shadow">
-                  <Text className={"font-semibold " + activeTextClass}>{item.title}</Text>
-                </TouchableOpacity>
-              )
-            }}
-          />
-        </View>
+
           
       </SafeAreaView>
-
-      {/* coffee cards */}
-      <View className={`overflow-visible flex justify-center flex-1 ${ios? 'mt-10':''} mb-3`}>
-        <View>
-          <Carousel
-            containerCustomStyle={{overflow: 'visible'}}
-            data={coffeeItems}
-            renderItem={({item})=> <CoffeeCard item={item} />}
-            firstItem={1}
-            loop={true}
-            inactiveSlideScale={0.75}
-            inactiveSlideOpacity={0.75}
-            sliderWidth={width}
-            itemWidth={width*0.63}
-            slideStyle={{display: 'flex', alignItems: 'center'}}
-          />
-        </View>
-        
-      </View>
-      
-      
     </View>
   )
 }

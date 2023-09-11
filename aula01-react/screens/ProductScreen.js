@@ -10,16 +10,13 @@ import { ShoppingBag } from 'react-native-feather';
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
 
-export default function FavouriteScreen(props) {
- 
-   
+export default function CartTabs(props) {
+  const [activeCategory, setActiveCategory] = useState(1);
+  
   const item = props.route.params;
   const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const navigation = useNavigation();
-  const irParaProximaTela = () => {
-    navigation.navigate('FavoriteScreen');
-  };
   const decrementarQuantidade = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
@@ -30,7 +27,6 @@ export default function FavouriteScreen(props) {
     setQuantity(quantity + 1);
   };
   return (
-    
     <ScrollView className="flex flex-column min-h-screen overflow-y-auto">
       <StatusBar style="light" />
       <Image
@@ -43,8 +39,8 @@ export default function FavouriteScreen(props) {
             <ArrowLeftCircleIcon size="50" strokeWidth={1.2} color="white"/>
           </TouchableOpacity>
 
-          <TouchableOpacity className=" rounded-full border-2 border-white p-2" onPress={irParaProximaTela}>
-            <HeartIcon size="24" color="white" />
+          <TouchableOpacity className=" rounded-full border-2 border-white p-2">
+            <HeartIcon size="24" color="white"/>
           </TouchableOpacity>
         </View>
         <View 
@@ -133,6 +129,7 @@ export default function FavouriteScreen(props) {
             </TouchableOpacity>
           </View>
         </View>
+        
         
       </SafeAreaView>
       
