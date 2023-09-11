@@ -8,9 +8,9 @@ import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
-
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
+
 export default function HomeScreen() {
   const [activeCategory, setActiveCategory] = useState(1);
 
@@ -71,7 +71,7 @@ export default function HomeScreen() {
         </View>
           
       </SafeAreaView>
-
+    
       {/* coffee cards */}
       <View className={`overflow-visible flex justify-center flex-1 ${ios? 'mt-10':''} mb-3`}>
         <View>
@@ -90,7 +90,7 @@ export default function HomeScreen() {
         </View>
         
       </View>
-      
+
       
     </View>
   )

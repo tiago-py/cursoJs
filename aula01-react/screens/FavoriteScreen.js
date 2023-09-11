@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Favorite, categories, coffeeFav } from '../constants';
 import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
-import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
+import { BellIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
 
 const {width, height} = Dimensions.get('window');
@@ -82,5 +82,7 @@ export default function HomeScreen() {
       
       
     </View>
+    
   )
+
 }

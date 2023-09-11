@@ -3,9 +3,6 @@ import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {themeColors} from '../theme';
 import { StatusBar } from 'expo-status-bar';
-import { categories, coffeeItems } from '../constants';
-import Carousel from 'react-native-snap-carousel';
-import CoffeeCard from '../components/coffeeCard';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
 

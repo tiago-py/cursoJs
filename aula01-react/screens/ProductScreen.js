@@ -12,7 +12,6 @@ const ios = Platform.OS == 'ios';
 
 export default function CartTabs(props) {
   const [activeCategory, setActiveCategory] = useState(1);
-  
   const item = props.route.params;
   const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -39,7 +38,7 @@ export default function CartTabs(props) {
             <ArrowLeftCircleIcon size="50" strokeWidth={1.2} color="white"/>
           </TouchableOpacity>
 
-          <TouchableOpacity className=" rounded-full border-2 border-white p-2">
+          <TouchableOpacity className=" rounded-full border-2 border-white p-2" onPress={()=> navigation.navigate('Favorite')}>
             <HeartIcon size="24" color="white"/>
           </TouchableOpacity>
         </View>
@@ -119,7 +118,7 @@ export default function CartTabs(props) {
           </View>
           {/* buy now button */}
           <View className="flex-row justify-between px-4">
-            <TouchableOpacity className="p-4 rounded-full border border-gray-400">
+            <TouchableOpacity className="p-4 rounded-full border border-gray-400" onPress={()=> navigation.navigate('Cart')}>
               <ShoppingBag size="30" color="gray" />
             </TouchableOpacity>
             <TouchableOpacity 
