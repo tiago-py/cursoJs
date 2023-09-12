@@ -5,10 +5,11 @@ import {themeColors} from '../theme';
 import { StatusBar } from 'expo-status-bar';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
-
+import {tabNavigator} from '../components/tabNavigator'
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
-export default function HomeScreen() {
+const Nav = tabNavigator();
+export default function CartScreen() {
   const [activeCategory, setActiveCategory] = useState(1);
 
   return (
@@ -45,7 +46,9 @@ export default function HomeScreen() {
           </View>
         </View>
 
+        <Nav>
           
+        </Nav>
       </SafeAreaView>
     </View>
   )

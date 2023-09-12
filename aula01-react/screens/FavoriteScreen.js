@@ -8,10 +8,12 @@ import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
 import { BellIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
-export default function HomeScreen() {
+const Tab = createBottomTabNavigator();
+export default function FavoriteScreen() {
   const [activeCategory, setActiveCategory] = useState(1);
 
   return (
@@ -79,7 +81,6 @@ export default function HomeScreen() {
         </View>
         
       </View>
-      
       
     </View>
     
